@@ -1,0 +1,109 @@
+/* Dashboard Main Wrapper */
+.dashboard {
+    padding: 2rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Dashboard Heading */
+  .dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  /* Metrics Section */
+  .dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .metric-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    flex: 1 1 180px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Charts Section */
+  .dashboard-charts {
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .charts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .chart-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-width: 0;
+  }
+  
+  .chart-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #222;
+  }
+  
+  /* Responsive Behavior */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      flex-direction: column;
+    }
+  
+    .metric-card {
+      width: 100%;
+    }
+  }
+  
+
+  /* src/components/Charts.css */
+
+.chart-toggle {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chart-toggle:hover {
+    color: #007bff;
+  }
+  
+  .chart-section-toggle {
+  cursor: pointer;
+  margin-top: 20px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.chart-section-toggle:hover {
+  color: #0056b3;
+}

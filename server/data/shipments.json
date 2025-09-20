@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "status": "In Transit",
+    "origin": "Delhi",
+    "destination": "Mumbai",
+    "eta": "2025-04-10 15:30",
+    "location": { "lat": 28.6139, "lng": 77.2090 }
+  },
+  {
+    "id": 2,
+    "status": "Delayed",
+    "origin": "Chennai",
+    "destination": "Kolkata",
+    "eta": "2025-04-11 12:00",
+    "location": { "lat": 13.0827, "lng": 80.2707 }
+  }
+]

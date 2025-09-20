@@ -1,0 +1,10 @@
+[
+  { "id": 1, "product": "Laptop", "status": "Pending", "quantity": 45, "route": "NY-LA" },
+  { "id": 2, "product": "Smartphone", "status": "Shipped", "quantity": 30, "route": "SF-TX" },
+  { "id": 3, "product": "Tablet", "status": "Delivered", "quantity": 20, "route": "TX-NY" },
+  { "id": 4, "product": "Headphones", "status": "Pending", "quantity": 60, "route": "LA-SF" },
+  { "id": 5, "product": "Camera", "status": "Processing", "quantity": 15, "route": "NY-CHI" },
+  { "id": 6, "product": "Monitor", "status": "Shipped", "quantity": 25, "route": "CHI-SEA" },
+  { "id": 7, "product": "Keyboard", "status": "Delivered", "quantity": 35, "route": "SEA-DEN" },
+  { "id": 8, "product": "Mouse", "status": "Pending", "quantity": 50, "route": "DEN-MIA" }
+]

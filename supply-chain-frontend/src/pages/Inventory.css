@@ -1,0 +1,197 @@
+.inventory-page {
+  padding: 1.5rem;
+  color: #333;
+  max-width: 100%;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Summary cards */
+.inventory-summary {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  background: #e3f2fd;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #0d47a1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  flex: 1 1 180px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+}
+
+.summary-card.low {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-box,
+.filters select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollable table wrapper */
+.inventory-table-wrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1;
+  max-height: 60vh;
+  border-radius: 10px;
+}
+
+/* Table design */
+.inventory-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.inventory-table th {
+  background-color: #f1f3f5;
+  font-weight: 600;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.inventory-table td button {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.inventory-table td button:hover {
+  background-color: #218838;
+}
+
+/* Low stock row */
+.low-stock {
+  background-color: #fff5f5;
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.alert-badge {
+  color: #b22222;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+/* Add form */
+.add-form {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-form input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.add-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-form button:hover {
+  background-color: #0056b3;
+}
+
+/* -------------------------- */
+/* MEDIA QUERIES for laptops */
+/* -------------------------- */
+
+@media (max-width: 1024px) {
+  .summary-card {
+    flex: 1 1 100%;
+  }
+
+  .inventory-table th,
+  .inventory-table td {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .add-form input,
+  .add-form button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-table {
+    min-width: 100%;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .add-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

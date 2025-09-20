@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "product": "Laptop",
+    "stock": 150,
+    "city": "Bangalore"
+  },
+  {
+    "id": 2,
+    "product": "Smartphone",
+    "stock": 300,
+    "city": "Mumbai"
+  },
+  {
+    "id": 3,
+    "product": "Router",
+    "stock": 105,
+    "city": "Hyderabad"
+  },
+  {
+    "id": 4,
+    "product": "Printer",
+    "stock": 20,
+    "city": "Chennai"
+  },
+  {
+    "id": 5,
+    "product": "Tablet",
+    "stock": 100,
+    "city": "Delhi"
+  },
+  {
+    "id": 6,
+    "product": "Monitor",
+    "stock": 90,
+    "city": "Pune"
+  },
+  {
+    "id": 7,
+    "product": "Keyboard",
+    "stock": 200,
+    "city": "Ahmedabad"
+  },
+  {
+    "id": 8,
+    "product": "Mouse",
+    "stock": 250,
+    "city": "Kolkata"
+  },
+  {
+    "product": "Tablet",
+    "stock": 100,
+    "city": "Delhi",
+    "id": 9
+  },
+  {
+    "product": "Tablet",
+    "stock": 100,
+    "city": "Delhi",
+    "id": 10
+  },
+  {
+    "product": "Tablet",
+    "stock": 100,
+    "city": "Delhi",
+    "id": 11
+  }
+]
