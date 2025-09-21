@@ -1,0 +1,14 @@
+[build]
+  command = "cd client && npm run build"
+  functions = "netlify/functions"
+  publish = "client/build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+[build.environment]
+  NODE_VERSION = "18"
+  YARN_VERSION = "1.22.22"
