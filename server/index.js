@@ -24,8 +24,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-    
 app.use("/api/inventory", require("./routes/inventory"));  
 app.use("/api/orders", require("./routes/orders"));         
 app.use("/api/dashboard", require("./routes/dashboard"));   
@@ -37,7 +35,7 @@ app.get("/", (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT; // Use Render's assigned port (10000 by default)
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
