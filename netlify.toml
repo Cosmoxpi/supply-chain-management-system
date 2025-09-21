@@ -1,14 +1,36 @@
-[build]
-  command = "cd client && npm run build"
-  functions = "netlify/functions"
-  publish = "client/build"
+# your-project/netlify.toml
 
+[build]
+  # Build frontend in supply-chain-frontend/
+  command = "cd supply-chain-frontend && npm run build"
+  # Directory containing Netlify Functions (backend in server/)
+  functions = "server/netlify/functions"
+  # Directory to publish as the static site (frontend build output)
+  publish = "supply-chain-frontend/build"
+
+# Redirects to route API requests to Netlify Functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
   force = true
 
+# Environment settings for the build process
 [build.environment]
-  NODE_VERSION = "18"
-  YARN_VERSION = "1.22.22"
+  NODE_VERSION = "18"  # Match your Node.js version
+  YARN_VERSION = "1.22.22"  # Match your yarn version
+
+# Optional: CORS headers (use if not handled in functions)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+
+# Context-specific configurations
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  environment = { NODE_ENV = "development" }
